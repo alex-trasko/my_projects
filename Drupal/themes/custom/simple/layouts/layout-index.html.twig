@@ -1,0 +1,27 @@
+{% if content.page_top %}
+  <div class="white-line">
+    <div class="indent">
+      <div class="container">
+        {{ content.page_top }}
+      </div>
+    </div>
+  </div>
+{% endif %}
+<div class="gray-line">
+  <div class="indent">
+    <div class="container">
+      <div class="index">
+        {{ content.index }}
+      </div>
+    </div>
+  </div>
+</div>
+{% if content.page_bottom %}
+  <div class="white-line">
+    <div class="indent">
+      <div class="container">
+        {{ content.page_bottom }}
+      </div>
+    </div>
+  </div>
+{% endif %}

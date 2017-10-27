@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="component" version="2.5.0" method="upgrade">
+
+	<name>COM_TRAVEL</name>
+    <!-- The following elements are optional and free of formatting conttraints -->
+	<creationDate>март 2013</creationDate>
+	<author>Траско Алексей</author>
+	<authorEmail></authorEmail>
+	<authorUrl></authorUrl>
+	<copyright></copyright>
+	<license></license>
+    <!--  The version string is recorded in the components table -->
+	<version>0.0.1</version>
+    <!-- The description is optional and defaults to the name -->
+	<description>COM_TRAVEL_DESCRIPTION</description>
+
+    <!-- Runs on install -->
+	<install>
+		<sql>
+			<file driver="mysql" charset="utf8">sql/install.mysql.utf8.sql</file>
+		</sql>
+	</install>
+    <!-- Runs on uninstall -->
+	<uninstall>
+		<sql>
+			<file driver="mysql" charset="utf8">sql/uninstall.mysql.utf8.sql</file>
+		</sql>
+	</uninstall>
+    <!-- Runs on update -->
+	<update>
+		<schemas>
+			<schemapath type="mysql">sql/updates/mysql</schemapath>
+		</schemas>
+	</update>
+
+    <!-- Site Main File Copy Section -->
+    <!-- Note the folder attribute: This attribute describes the folder
+        to copy FROM in the package to install therefore files copied
+        in this section are copied from /site/ in the package -->
+    <files folder="site">
+		<filename>index.html</filename>
+		<filename>controller.php</filename>
+		<filename>travel.php</filename>
+		<folder>language</folder>
+		<folder>models</folder>
+		<folder>views</folder>
+	</files>
+
+	<media destination="com_travel" folder="media">
+		<filename>index.html</filename>
+		<folder>images</folder>
+        <folder>js</folder>
+	</media>
+
+    <!-- Administration -->
+	<administration>
+        <!-- Administration Menu Section -->
+		<menu img="../media/com_travel/images/travel-16x16.png">COM_TRAVEL_MENU</menu>
+        <!-- Administration Main File Copy Section -->
+        <!-- Note the folder attribute: This attribute describes the folder
+            to copy FROM in the package to install therefore files copied
+            in this section are copied from /admin/ in the package -->
+        <files folder="admin">
+			<filename>index.html</filename>
+            <filename>config.xml</filename>
+			<filename>controller.php</filename>
+			<filename>travel.php</filename>
+			<folder>controllers</folder>
+			<folder>models</folder>
+			<folder>sql</folder>
+			<folder>tables</folder>
+			<folder>views</folder>
+		</files>
+		<languages folder="admin">
+			<language tag="en-GB">language/en-GB/en-GB.com_travel.ini</language>
+			<language tag="en-GB">language/en-GB/en-GB.com_travel.sys.ini</language>
+			<language tag="ru-RU">language/ru-RU/ru-RU.com_travel.ini</language>
+			<language tag="ru-RU">language/ru-RU/ru-RU.com_travel.sys.ini</language>
+		</languages>
+	</administration>
+
+</extension>

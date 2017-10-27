@@ -1,0 +1,10 @@
+global-styling:
+  version: VERSION
+  css:
+    base:
+      css/styles.css: {}
+
+  js:
+    js/jquery.min.js: {}
+    js/light-tabs.js: {}
+    js/main.js: {}

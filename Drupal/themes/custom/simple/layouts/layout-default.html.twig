@@ -1,0 +1,33 @@
+{% if content.page_top %}
+  <div class="white-line">
+    <div class="indent">
+      <div class="container">
+        {{ content.page_top }}
+      </div>
+    </div>
+  </div>
+{% endif %}
+<div class="gray-line">
+  <div class="indent">
+    <div class="container">
+      <div class="breadcrumb">
+        {{ content.breadcrumb }}
+      </div>
+      <aside class="sidebar-left" role="complementary">
+        {{ content.sidebar_left }}
+      </aside>
+      <div class="sidebar-right">
+        {{ content.sidebar_right }}
+      </div>
+    </div>
+  </div>
+</div>
+{% if content.page_bottom %}
+  <div class="white-line">
+    <div class="indent">
+      <div class="container">
+        {{ content.page_bottom }}
+      </div>
+    </div>
+  </div>
+{% endif %}

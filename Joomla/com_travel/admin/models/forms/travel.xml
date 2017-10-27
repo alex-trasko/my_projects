@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fieldset name="details">
+        <field
+			name="id"
+			type="hidden"
+		/>
+		<field
+            name="title"
+			type="text"
+			label="COM_TRAVEL_FIELD_TITLE_LABEL"
+			description="COM_TRAVEL_FIELD_TITLE_DESC"
+            required="true"
+            maxlength="60"
+            size="70"
+			class="inputbox"
+			default=""
+		/>
+        <field
+            id = "place"
+            name="place"
+            type="text"
+            label="COM_TRAVEL_FIELD_PLACE_LABEL"
+            description="COM_TRAVEL_FIELD_PLACE_DESC"
+            maxlength="60"
+            size="70"
+            class="inputbox"
+            default=""
+        />
+        <field
+            id = "start_date"
+            name="start_date"
+            type="calendar"
+            filter="%Y-%m-%d"
+            label="COM_TRAVEL_FIELD_START_DATE_LABEL"
+            description="COM_TRAVEL_FIELD_START_DATE_DESC"
+            size="70"
+            class="inputbox"
+            default=""
+        />
+        <field
+            id = "end_date"
+            name="end_date"
+            type="calendar"
+            filter="%Y-%m-%d"
+            label="COM_TRAVEL_FIELD_END_DATE_LABEL"
+            description="COM_TRAVEL_FIELD_END_DATE_DESC"
+            size="70"
+            class="inputbox"
+            default=""
+        />
+        <field
+            id="image"
+            name="image"
+            type="media"
+            label="COM_TRAVEL_FIELD_IMAGE_LABEL"
+            description="COM_TRAVEL_FIELD_IMAGE_DESC"
+            required="true"
+            size="40"
+            class="inputbox"
+            default=""
+            directory="travels"
+        />
+        <field
+            id="image_thumb"
+            name="image_thumb"
+            type="hidden"
+        />
+        <field
+            id="image_full"
+            name="image_full"
+            type="hidden"
+        />
+        <field
+            id="lat"
+            name="lat"
+            type="hidden"
+        />
+        <field
+            id="lng"
+            name="lng"
+            type="hidden"
+        />
+        <field
+            id="published"
+            name="published"
+            type="list"
+            label="COM_TRAVEL_FIELD_PUBLISHED_LABEL"
+            description="COM_TRAVEL_FIELD_PUBLISHED_DESC"
+            default="1"
+        >
+            <option value="1">Enabled</option>
+            <option value="0">Disabled</option>
+        </field>
+    </fieldset>
+    <fieldset name="description">
+        <field
+            id="description"
+            name="description"
+            type="editor"
+            filter="safehtml"
+            label="COM_TRAVEL_FIELD_DESCRIPTION_LABEL"
+            description="COM_TRAVEL_FIELD_DESCRIPTION_DESC"
+            required="true"
+            class="inputbox"
+            default=""
+        />
+	</fieldset>
+</form>

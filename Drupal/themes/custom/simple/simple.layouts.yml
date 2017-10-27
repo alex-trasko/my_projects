@@ -1,0 +1,45 @@
+index:
+  label: Index layout
+  category: Simple layouts
+  template: layouts/layout-index
+  regions:
+    page_top:
+      label: Page top
+    index:
+      label: Index  
+    page_bottom:
+      label: Page bottom
+
+default:
+  label: Default layout
+  category: Simple layouts
+  template: layouts/layout-default
+  regions:
+    page_top:
+      label: Page top
+    breadcrumb:
+      label: Breadcrumb
+    sidebar_left:
+      label: Sidebar left
+    sidebar_right:
+      label: Sidebar right
+    page_bottom:
+      label: Page bottom
+      
+catalog:
+  label: Catalog layout
+  category: Simple layouts
+  template: layouts/layout-catalog
+  regions:
+    page_top:
+      label: Page top
+    catalog_head:
+      label: Catalog head
+    breadcrumb:
+      label: Breadcrumb
+    sidebar_left:
+      label: Sidebar left
+    sidebar_right:
+      label: Sidebar right
+    page_bottom:
+      label: Page bottom

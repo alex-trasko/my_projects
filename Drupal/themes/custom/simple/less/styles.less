@@ -1,0 +1,351 @@
+//Fonts
+@font-face {
+  font-family: 'FuturaDemiC';
+  src: url('../fonts/futurademic-webfont.eot');
+  src: url('../fonts/futurademic-webfont.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/futurademic-webfont.woff2') format('woff2'),
+       url('../fonts/futurademic-webfont.woff') format('woff'),
+       url('../fonts/futurademic-webfont.ttf') format('truetype'),
+       url('../fonts/futurademic-webfont.svg#FuturaDemiC') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'FuturaBookC';
+  src: url('../fonts/futurabookc-webfont.eot');
+  src: url('../fonts/futurabookc-webfont.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/futurabookc-webfont.woff2') format('woff2'),
+       url('../fonts/futurabookc-webfont.woff') format('woff'),
+       url('../fonts/futurabookc-webfont.ttf') format('truetype'),
+       url('../fonts/futurabookc-webfont.svg#FuturaBookC') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-logo: FuturaDemiC, Arial, Helvetica, sans-serif;
+@font-title: FuturaBookC, Arial, Helvetica, sans-serif;
+@font-text: Arial, Helvetica, sans-serif;
+
+//Colors
+@color-red: #ff1528; //Used for logo and titles
+@color-white: #ffffff; //Used for background
+@color-gray-1: #222328; //Used for text, menus and banners
+@color-gray-2: #838d9f; //Used for text and links
+@color-gray-3: #c3c7cd; //Used for background
+@color-gray-4: #dce0e4; //Used for background
+@color-gray-5: #f0f0f0; //Used for background
+
+//Reset
+*{
+  margin: 0;
+  padding: 0;
+  outline: 0;
+}
+// HTML5 display-role reset for older browsers
+article, aside, details, figcaption, figure,
+footer, header, hgroup, main, menu, nav, section {
+  display: block;
+}
+html, body{
+  height: 100%;
+  width: 100%;
+}
+ul, ol{
+  list-style: none;
+}
+table{
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+th, td{
+  vertical-align: top;
+  text-align: left;
+  font-weight: normal;
+}
+img{
+  border:0;
+}
+input, textarea, select{
+  vertical-align: middle;
+  font: 12px @font-text;
+  color: @color-gray-1;
+}
+textarea{
+  resize: none;
+}
+h1{
+  font: 32px @font-title;
+  color: @color-red;
+}
+h2{
+  font: 24px @font-title;
+  color: @color-red;
+}
+h3{
+  font: 18px @font-title;
+  color: @color-red;
+}
+h4{
+  font: 14px @font-title;
+  color: @color-red;
+}
+h5{
+  font: 12px @font-title;
+  color: @color-red;
+}
+h6{
+  font: 10px @font-title;
+  color: @color-red;
+}
+a{
+  color: @color-gray-2;
+  text-decoration: underline;
+}
+a:hover{
+  text-decoration: none;
+}
+::selection {
+  background: @color-red; //Safari
+  color: @color-white;
+}
+::-moz-selection {
+  background: @color-red; //Firefox
+  color: @color-white;
+}
+
+//Settings
+body{
+  font: 12px @font-text;
+  color: @color-gray-1;
+  background-color: @color-white;
+  overflow-y: scroll;
+}
+.wrapper{
+  min-width:990px;
+  min-height:100%;
+  text-align:left;
+  overflow-x: hidden;
+}
+.indent{
+  margin:0 auto;
+  width:990px;
+}
+
+//Header
+.header{
+  position: relative;
+  margin: auto;
+  width: 100%;
+  height: 70px;
+  background-color: @color-gray-4;
+  z-index: 100;
+  .indent{
+    position: relative;
+  }
+  .logo-maz{
+    float:left;
+    margin:0 20px -35px 0;
+    img{
+      display: block;
+      width: 101px;
+      height: 100px;
+    }
+  }
+  .logo-szm{
+    float: left;
+    margin: 10px 20px 0 0;
+    width: 250px;
+    text-align: center;
+    .logo{
+      margin-bottom: 5px;
+      height: 35px;
+      font-family: @font-logo;
+      font-size: 12px;
+      line-height: 18px;
+      text-transform: uppercase;
+      a{
+        color: @color-red;
+        text-decoration: none;
+      }
+      img{
+        float: left;
+        margin-right: 10px;
+      }
+    }
+    .slogan{
+      font-size: 9px;
+      font-style: italic;
+      color: @color-gray-2;
+    }
+  }
+  .menu{
+    position: absolute;
+    right: 0;
+    top: 0;
+    >ul{
+      text-transform: uppercase;
+      white-space: nowrap;
+      //font: 12px @font-title;
+      a{
+        display: block;
+        padding: 5px 6px 5px 6px;
+        height: 15px;
+        color: @color-gray-1;
+        text-decoration: none;
+      }
+      li{
+        position: relative;
+        &:hover{
+          >ul{
+            display: block;
+          }
+        }
+      }
+      >li{
+        float: left;
+        margin: 23px 0 22px 0;
+        height: 25px;
+        >a:hover{
+          color: @color-red;
+        }
+        &.active{
+          >a{
+            color: @color-red;
+          }
+        }
+        &.last{
+          margin: 0;
+          height: 70px;
+          >a{
+            padding: 0 6px 0 6px;
+            height: 70px;
+            background-color: @color-red;
+            line-height: 70px;
+            color: @color-white !important;
+          }
+        }
+        ul{
+          display: none;
+          position: absolute;
+          width: auto;
+          background: url(../images/menu-bg.png) repeat scroll left top transparent;
+          li{
+            &:hover{
+              >a{
+                background-color: @color-red;
+                color: @color-white;
+              }
+            }
+            &.active{
+              >a{
+                background-color: @color-red;
+                color: @color-white;
+              }
+            }
+          }
+        }
+        >ul{
+          right: 0;
+          >li{
+            //float: right;
+            //clear: both;
+            text-align: right;
+            ul{
+              left: 100%;
+              top: 0;
+              li{
+                text-transform: none;
+                text-align: left;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// ... ... ...
+
+// ... etc ...
+
+// ... ... ...
+
+//Footer
+.footer{
+  position: relative;
+  margin-top: -110px;
+  height: 110px;
+  background-color: @color-gray-4;
+  color: @color-gray-2;
+  text-align: left;
+  .logo-szm-gray{
+    float: left;
+    margin: 10px 20px 0 0;
+    a{
+      display: block;
+      width: 70px;
+      height: 35px;
+      background: url(../images/logo-szm-sprite.png) no-repeat scroll left top transparent;
+      &:hover{
+        background: url(../images/logo-szm-sprite.png) no-repeat scroll left bottom transparent;
+      }
+    }
+  }
+  .copyright{
+    float: left;
+    margin: 10px 40px 0 0;
+  }
+  .social{
+    float:right;
+    margin: 10px 0 0 10px;
+    width: auto;
+    a{
+      float:left;
+      margin-left: 10px;
+      width: 32px;
+      height: 32px;
+    }
+    .facebook{
+      background: url(../images/socicons-sprite.png) no-repeat scroll left top;
+      &:hover{
+        background: url(../images/socicons-sprite.png) no-repeat scroll left bottom;
+      }
+    }
+    .twitter{
+      background: url(../images/socicons-sprite.png) no-repeat scroll -32px top;
+      &:hover{
+        background: url(../images/socicons-sprite.png) no-repeat scroll -32px bottom;
+      }
+    }
+    .linkedin{
+      background: url(../images/socicons-sprite.png) no-repeat scroll -64px top;
+      &:hover{
+        background: url(../images/socicons-sprite.png) no-repeat scroll -64px bottom;
+      }
+    }
+    .youtube{
+      background: url(../images/socicons-sprite.png) no-repeat scroll right top;
+      &:hover{
+        background: url(../images/socicons-sprite.png) no-repeat scroll right bottom;
+      }
+    }
+  }
+  .info{
+    float: right;
+    margin: 10px 0 0 40px;
+    font-size: 18px;
+    line-height: 28px;
+    text-align: right;
+    span{
+      font-size: 24px;
+    }
+  }
+}
+
+//Drupal clear
+.catalog-head{
+  .contextual-region{
+    position: static;
+  }
+}
